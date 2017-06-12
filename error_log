@@ -1,0 +1,1 @@
+[22-Jun-2016 07:05:09 UTC] PHP Warning:  mysqli_real_connect(): (28000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/infinite/public_html/demo/axel/wp-includes/wp-db.php on line 1490
