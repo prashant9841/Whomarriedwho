@@ -1,0 +1,172 @@
+@media only screen and (max-width : 1200px) {
+    .navbar-header .navbar-brand {
+        display: block;
+        float: left;
+        text-align: center;
+        width: 100%;
+        padding: 0;
+    }
+    
+    .navbar-collapse .navbar-nav{
+        float: none;
+    }
+    .navbar-nav > li {
+        float: left;
+    }
+    .navbar-collapse{
+        text-align: center;
+    }
+
+
+}
+@media only screen and (max-width: 991px) {
+    .nav>li>a{padding: 10px 9px;}
+    .celebs-box .col-md-2.celeb{
+        width: 16.5%;
+        float: left;
+    }
+    .navbar-header {
+        display: block;
+        float: left;
+        text-align: left;
+    }
+    .navbar-collapse .navbar-nav{
+        float: left;
+    }
+    .profile-overview .profile{
+        float: none;
+        width: 100%;
+        display: block;
+    }
+    .profile-overview  .know-card{
+        float: left;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+    .navbar-nav li a{
+        letter-spacing: 0;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .profile-overview{
+        min-width: 100px;
+    }
+    .wrap-box{overflow: hidden;}
+    .navbar-collapse .nav.navbar-nav{
+        display: block;
+    }
+    .navbar-collapse{
+        float: none;
+    }
+    .navbar-header{
+        float: none;
+    }
+    .navbar-collapse .nav.navbar-nav{
+        float: none;
+    }
+    nav.more-related a{
+        width: 100%;
+        display: block;
+        float: none;
+        margin: 0 0 5px;
+    }
+    .feature-region .col-xs-12{
+        margin: 0 0 10px;
+    }
+    .navbar-header .navbar-brand {
+        float: left;
+        position: relative;
+        text-align: left;
+        width: 280px;
+        padding:0;
+    }
+    .navbar-header{
+        border-bottom:1px solid #ccc;
+    }
+    .navbar-collapse .navbar-nav li{
+        display: block;
+        float: none;
+        text-align: left;
+    }
+    .navbar-collapse .navbar-nav li a{
+        display: block;
+        background: #f0f0f0;
+        border-top: 1px solid #e0e0e0;
+        font-weight: 500;
+    }
+    .footer {
+
+  padding: 18px 0 10px;
+  
+}
+.footer-logo.pull-right {
+  width: 90px;
+}
+    
+    .col-lg-3.pull-right{
+        width: 100%;
+        float:none;
+        display: block;
+        overflow: hidden;
+    }
+    .sb-search {
+    /* display: none; */
+    position: relative;
+    width: 100% !important;
+    margin: 0 0 20px;
+}
+.star-navigation{
+    padding:0;
+}
+.navbar-collapse{
+    max-height: 400px;
+}
+.sb-search-input{
+    position: static;
+}
+    .dropdown-menu{
+        left: -100% !important;
+    }
+} 
+@media only screen and (max-width:600px){
+    .profile-overview{
+        width: 100%;
+        max-width: 100%;
+        float: none;
+    }
+} 
+@media only screen and (max-width: 480px) {
+
+    .wrapper-member .calender-block, .wrapper-month .calender-block{
+        width: 100%;
+        float: none;
+    }
+    .celebs-box .col-md-2.celeb{
+        width: 49.7%;
+        float: left;
+    }
+    .profile-overview .profile{
+        margin: 0 0 30px;
+    }
+    .profile-overview .thumbnail{
+        float:none;
+        margin: 0 auto;
+    }
+    .profile-overview .user-content {
+        float: none; 
+        max-width: 100%; 
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 358px) {
+    .celebs-box .col-md-2.celeb{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .more-related  a{
+        width: 100%;
+    }
+}
