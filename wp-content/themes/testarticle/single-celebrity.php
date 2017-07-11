@@ -12,6 +12,7 @@ global $post;
 
 foreach((get_the_category()) as $category) {
   $cat = $category->cat_name; 
+
 } 
  ?>
 
@@ -22,7 +23,7 @@ foreach((get_the_category()) as $category) {
         <div class="col-md-8">
             <div class="ad-field clearfix">
                 <a href="#">
-                    <img src="images/add.jpg" alt="add for here">
+                    <!-- <img src="images/add.jpg" alt="add for here"> -->
                 </a>
             </div>
 
@@ -48,17 +49,17 @@ foreach((get_the_category()) as $category) {
 
                         <div class="know-card clearfix">
                             <div class="card">
-                                <i class="fa fa-calendar"></i>
-                                <div class="card-dept clearfix">
-                                    <label>Married at</label>
-                                    <strong><time itemprop="Married Date" datetime="<?php echo types_render_field('married-at');?>"><a href="#"><?php echo types_render_field('married-at');?></a></time></strong>
-                                </div>
-                            </div>
-                            <div class="card">
                                 <i class="fa fa-map-marker"></i>
                                 <div class="card-dept clearfix">
                                     <label>Married To</label>
                                     <strong><a href=" <?php echo types_render_field('married-url');?> "><?php echo types_render_field('married-name');?></a></strong>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <i class="fa fa-calendar"></i>
+                                <div class="card-dept clearfix">
+                                    <label>Married at</label>
+                                    <strong><time itemprop="Married Date" datetime="<?php echo types_render_field('married-at');?>"><a href="#"><?php echo types_render_field('married-at');?></a></time></strong>
                                 </div>
                             </div>
                             <div class="card">
@@ -72,22 +73,20 @@ foreach((get_the_category()) as $category) {
                     </div>
                     <div class="profile-content">
                         <h3 class="title"><?php the_title(); ?> Facts <a href="#" data-toggle="modal" data-target="#myModal"></a></h3>
-                        <span class="sub-title"><strong>Date of birth:</strong></span>
-                        <p><?php echo types_render_field('dob-s');?></p>
-                        <span class="sub-title"><strong>Birth Place</strong></span>
-                        <p><?php echo types_render_field('birth-place');?></p>
                         <span class="sub-title"><strong>About</strong></span>
                         <p><?php echo types_render_field('about-him');?></p>
                         <span class="sub-title">BEFORE FAME</span>
                         <p><?php echo types_render_field('before-fame');?></p>
-                        <span class="sub-title">TRIVIA FACT</span>
+                        <span class="sub-title">CAREER</span>
                         <p><?php echo types_render_field('trivia-fact');?></p>
-                        <span class="sub-title">FAMILY LIFE</span>
+                        <span class="sub-title">DATING LIFE</span>
                         <p><?php echo types_render_field('family-life');?></p>
-                        <span class="sub-title">ASSOCIATED WITH</span>
+                        <span class="sub-title">MARRIED LIFE</span>
                         <p><?php echo types_render_field('associated-with');?></p>
-                        <span class="sub-title">RUMOR / CONTROVERSY</span>
+                        <span class="sub-title">CONTROVERSY</span>
                         <p><?php echo types_render_field('controversy');?></p>
+                        <span class="sub-title">NET WORTH</span>
+                        <p><?php echo types_render_field('net-worth');?></p>
 
                     </div>
                 </div>
@@ -97,7 +96,7 @@ foreach((get_the_category()) as $category) {
             <!-- TIMELINE -->
 
 
-            <div class="time-line row">
+           <!--  <div class="time-line row">
                 <div class="col xs-12">
                     <h2 class="title">Timeline</h2>
                 </div>
@@ -143,6 +142,51 @@ foreach((get_the_category()) as $category) {
                 </div>
             	
             </div>
+ -->
+
+            <div class="popularity clearfix">
+                <h4 class="profile-related-title"><span>Size of <?php the_title() ?></span></h4>
+                <div class="popularity-categories">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <a href="#" class="popularity-box">
+                                <div class="popularity-box-content">
+                                    <h4 class="number-value">Height </h4>
+                                    <b> <?php echo types_render_field('height');?> </b>
+
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <a href="#" class="popularity-box">
+                                <div class="popularity-box-content">
+                                    <h4 class="number-value">Birthday</h4>
+                                    <b> <?php echo types_render_field('dob-s');?> </b>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <a href="#" class="popularity-box">
+                                <div class="popularity-box-content">
+                                    <h4 class="number-value">Birthplace</h4>
+                                    <b> <?php echo types_render_field('birth-place');?> </b>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-12">
+                            <a href="#" class="popularity-box">
+                                <div class="popularity-box-content">
+                                    <h4 class="number-value">Birth Sign</h4>
+                                    <b> <?php echo types_render_field('birth-sign');?> </b>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <br>
 
 
 
@@ -152,15 +196,17 @@ foreach((get_the_category()) as $category) {
                 <center><img src="http://placehold.it/336x250"></center>
 
                 <h2>Related Bio</h2>
+
+                <div class="row">
+                    
             
-            	<?php 
+                <?php 
 
                     global $post;              
-                      $args = array( 'post_type' => 'new_celeb', 'category_name' => $cat,  'posts_per_page' => -1);
-                      $loop = new WP_Query( $args );
-                      while ( $loop->have_posts() ) : $loop->the_post(); 
-
-                        $imgsrc =  wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+                    $args = array( 'post_type' => 'celebrity', 'category_name' => $cat,  'posts_per_page' => -1);
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $imgsrc =  wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
                 ?>
 
                     <div class="item col-xs-12">
@@ -178,6 +224,7 @@ foreach((get_the_category()) as $category) {
                     endwhile;
                     wp_reset_query();
                 ?>
+                </div>
             </div>
         </div>
     </div>

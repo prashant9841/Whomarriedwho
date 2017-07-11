@@ -43,13 +43,13 @@
 
 
 
-	add_action( 'init', 'create_post_type_celeb' );
-	function create_post_type_celeb() {
-	  register_post_type( 'new_celebs',
+	add_action( 'init', 'create_post_type_celebrity' );
+	function create_post_type_celebrity() {
+	  register_post_type( 'celebrity',
 	    array(
 	      'labels' => array(
-	        'name' => __( 'Celebs' ),
-	        'singular_name' => __( 'celeb' )
+	        'name' => __( 'celebrities' ),
+	        'singular_name' => __( 'celebrity' )
 	      ),
 	      'public' => true,
 	      'has_archive' => true,
@@ -86,7 +86,7 @@
 
 	    add_meta_box(
 	        'my-new_time-parent',
-	        __( 'celebs', 'example-textdomain' ),
+	        __( 'celebrities', 'example-textdomain' ),
 	        'my_new_time_parent_meta_box',
 	        $post->post_type,
 	        'side',
@@ -99,7 +99,7 @@
 
 	    $parents = get_posts(
 	        array(
-	            'post_type'   => 'new_celebs', 
+	            'post_type'   => 'celebrity', 
 	            'orderby'     => 'title', 
 	            'order'       => 'ASC', 
 	            'numberposts' => -1 

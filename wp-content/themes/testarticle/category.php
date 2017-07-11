@@ -23,7 +23,7 @@ $tacs = get_cat_name( $category_id = $cats );
 			<?php
 
 			// The Loop
-			$args = array( 'post_type' => 'new_celebs', 'category_name' => $tacs, 'posts_per_page' => -1 );
+			$args = array( 'post_type' => 'celebrity', 'category_name' => $tacs, 'posts_per_page' => -1 );
           	$loop = new WP_Query( $args );
           	while ( $loop->have_posts() ) : $loop->the_post(); 
 			$imgsrc =  wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
