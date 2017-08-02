@@ -49,24 +49,27 @@ foreach((get_the_category()) as $category) {
 
                         <div class="know-card clearfix">
                             <div class="card">
-                                <i class="fa fa-map-marker"></i>
                                 <div class="card-dept clearfix">
-                                    <label>Married To</label>
+                                    <label>&nbsp; &nbsp;Married To</label>
                                     <strong><a href=" <?php echo types_render_field('married-url');?> "><?php echo types_render_field('married-name');?></a></strong>
                                 </div>
                             </div>
                             <div class="card">
-                                <i class="fa fa-calendar"></i>
                                 <div class="card-dept clearfix">
-                                    <label>Married at</label>
+                                    <label>&nbsp; &nbsp;Married at</label>
                                     <strong><time itemprop="Married Date" datetime="<?php echo types_render_field('married-at');?>"><a href="#"><?php echo types_render_field('married-at');?></a></time></strong>
                                 </div>
                             </div>
                             <div class="card">
-                                <i class="fa fa-rocket"></i>
                                 <div class="card-dept clearfix">
-                                    <label>AGE</label>
-                                    <strong><a href="#"><?php echo types_render_field('age');?></a></strong>
+                                    <label>&nbsp; &nbsp;Marital Status</label>
+                                    <strong><a href="#"><?php echo types_render_field('marital-status');?></a></strong>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-dept clearfix">
+                                    <label>&nbsp; &nbsp;Married Times</label>
+                                    <strong><a href="#"><?php echo types_render_field('married-times');?></a></strong>
                                 </div>
                             </div>
                         </div>
