@@ -54,7 +54,7 @@
 	      'public' => true,
 	      'has_archive' => true,
 	      // 'hierarchical' => true,
-	      'supports' => array( 'title', 'editor', 'excerpt', 'custom-fields', 'thumbnail' ),
+	      'supports' => array( 'title', 'excerpt', 'custom-fields', 'thumbnail' ),
 	    )
 	  );
 	}

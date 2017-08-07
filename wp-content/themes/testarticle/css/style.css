@@ -1109,3 +1109,6 @@ center{
     }
 
 }
+.profile .user-thumb img {
+    height: 100%;
+}
