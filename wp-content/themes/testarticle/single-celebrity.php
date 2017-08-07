@@ -148,7 +148,7 @@ foreach((get_the_category()) as $category) {
  -->
 
             <div class="popularity clearfix">
-                <h4 class="profile-related-title"><span>Size of <?php the_title() ?></span></h4>
+                <h4 class="profile-related-title"><span>Quick Facts of <?php the_title() ?></span></h4>
                 <div class="popularity-categories">
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
