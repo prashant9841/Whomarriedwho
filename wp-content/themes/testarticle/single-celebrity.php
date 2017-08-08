@@ -206,7 +206,7 @@ foreach((get_the_category()) as $category) {
                 <?php 
 
                     global $post;              
-                    $args = array( 'post_type' => 'celebrity', 'category_name' => $cat,  'posts_per_page' => -1);
+                    $args = array( 'post_type' => 'celebrity', 'category_name' => $cat,  'posts_per_page' => 3);
                     $loop = new WP_Query( $args );
                     while ( $loop->have_posts() ) : $loop->the_post();
                     $imgsrc =  wp_get_attachment_url( get_post_thumbnail_id($post->ID) );

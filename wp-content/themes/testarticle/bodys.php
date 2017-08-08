@@ -9,11 +9,6 @@
    <div class="body">
      
 <div class="container">
-  <div class="ad-field clearfix">
-    <a href="#">
-      <img src="<?php echo  get_template_directory_uri().'/images/add.jpg' ?>" alt="add for here">
-    </a>
-  </div>
   <header class="page-header">
     <h2 class="title">Married Couples</h2>
   </header>
