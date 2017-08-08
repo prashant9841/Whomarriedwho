@@ -6,27 +6,38 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title><?php bloginfo('name'); ?> | <?php bloginfo('description' ); ?></title>
+
+
+        <!-- FOR TITLE IN HEAD? WINTER IS COMMING -->
+
+        <?php 
+            $current_url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+            $home_url=get_site_url().'/';
+
+            if ($home_url == $current_url) {
+        ?>
+            <title><?php bloginfo('name'); ?> | <?php bloginfo('description' ); ?></title>
+        <?php
+            }
+            else {
+        ?>
+                <title><?php wp_title('', true,''); ?> | <?php bloginfo('name'); ?></title>
+        <?php 
+
+            }
+        ?>
+
+
+
         <?php wp_head(); ?>
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,500italic,700,900' rel='stylesheet' type='text/css'>
-        <!-- Bootstrap -->
-    <!--     <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/jquery.fancybox.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
-        <link href="css/responsive.css" rel="stylesheet">
- -->
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="js/html5.js"></script>
-          <script src="js/meadiaquery.js"></script>
-        <![endif]-->
     </head>
     <body>
 
     <?php $logo = get_template_directory_uri().'/images/logo.png'; ?>
         <header>
+        <br>
+
             <!-- Navbar -->
             <div class="navbar navbar-default star-navigation" role="navigation">
                 <div class="container">
